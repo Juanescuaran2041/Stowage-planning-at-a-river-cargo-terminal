@@ -25,7 +25,7 @@ public class ContainerUnit implements ChargeUnity {
 
     @Override
     public double weight() {
-        return netWeight + feet == 20 ? 2.2 : 3.8;
+        return netWeight + (feet == 20 ? 2.2 : 3.8);
     }
 
     @Override
