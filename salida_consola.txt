@@ -1,0 +1,92 @@
+linesRead: 12 | acceptedLines: 10 | rejectedLines: 2
+  [REJECTED] GRA;CARBON-TERMICO;850;13.5   -> error no coincide la sigla de registro
+  [REJECTED] CNT;MSKU999;XX;18.5;SELLO-8901   -> error no numerico de feet
+
+=== RIVER TERMINAL OF BARRANCABERMEJA ===
+STOWAGE PLAN No. PE-2026-0148
+Barge: BZ-4417   Departure: 2026-05-12   Terminal: CONTENEDORES
+Equipment: Grua portico movil GP-1 (180 t/h)
+
+HOLD       LOAD (t)   CAPACITY   OCCUPANCY   UNITS
+B1           585,00      600,0      97,5 %       2
+B2           630,00      750,0      84,0 %       2
+B3           740,00      750,0      98,7 %       3
+B4           520,00      600,0      86,7 %       3
+TOTAL       2475,00
+
+Bow: 1215,00 t | Stern: 1260,00 t | Imbalance: 1,82 % (max 5,00 %) -> OK
+Estimated draft: 1,14 m (max 2,10 m) -> OK
+Estimated loading time: 13 h 45 min
+PLAN STATUS: APPROVED
+
+LOADING SEQUENCE
+ 1. B1 <- MSKU1234567(40) 345,00 t
+ 2. B1 <- TCLU5678901(40) 240,00 t
+ 3. B2 <- TCLU8877213(40) 330,00 t
+ 4. B2 <- MSKU2345678(40) 300,00 t
+ 5. B3 <- HLXU3456789(40) 280,00 t
+ 6. B3 <- MSKU4567890(40) 260,00 t
+ 7. B3 <- MSKU6789012(40) 200,00 t
+ 8. B4 <- HLXU7890123(40) 190,00 t
+ 9. B4 <- MSKU8901234(40) 180,00 t
+ 10. B4 <- TCLU9012345(40) 150,00 t
+
+DOCUMENT: List of units with seal number per container
+MSKU1234567(40) seal: SELLO-8891
+TCLU5678901(40) seal: SELLO-8896
+TCLU8877213(40) seal: SELLO-8892
+MSKU2345678(40) seal: SELLO-8893
+HLXU3456789(40) seal: SELLO-8894
+MSKU4567890(40) seal: SELLO-8895
+MSKU6789012(40) seal: SELLO-8897
+HLXU7890123(40) seal: SELLO-8898
+MSKU8901234(40) seal: SELLO-8899
+TCLU9012345(40) seal: SELLO-8900
+
+
+########## BULK TERMINAL ##########
+linesRead: 3 | acceptedLines: 3 | rejectedLines: 0
+
+=== RIVER TERMINAL OF BARRANCABERMEJA ===
+STOWAGE PLAN No. PE-2026-0149
+Barge: BZ-4417   Departure: 2026-05-12   Terminal: GRANEL_SOLIDO
+Equipment: ConveyorBelt (320 t/h)
+
+HOLD       LOAD (t)   CAPACITY   OCCUPANCY   UNITS
+B1           525,00      600,0      87,5 %       1
+B2           574,40      750,0      76,6 %       2
+B3             0,00      750,0       0,0 %       0
+B4             0,00      600,0       0,0 %       0
+TOTAL       1099,40
+
+Bow: 1099,40 t | Stern: 0,00 t | Imbalance: 100,00 % (max 8,00 %) -> NOT APPROVED
+  Tons to move from the heavy side to the light side: 505,72 t
+Estimated draft: 0,81 m (max 1,80 m) -> OK
+Estimated loading time: 3 h 26 min
+PLAN STATUS: NOT APPROVED
+
+LOADING SEQUENCE
+ 1. B1 <- CARBON-TERMICO(500.0) 525,00 t
+ 2. B2 <- MAIZE(400.0) 440,00 t
+ 3. B2 <- SOJA(120.0) 134,40 t
+
+DOCUMENT: Bill of lading with humidity certificate
+CARBON-TERMICO(500.0) humidity: 5.0 %
+MAIZE(400.0) humidity: 10.0 %
+SOJA(120.0) humidity: 12.0 %
+
+
+--- RIVER LEVEL (adapters) ---
+LIMNIMETER -> 2,90 m | available draft 2,50 m | effective max draft 2,10 m
+Plan re-evaluated: draft 1,14 m (max 2,10 m) -> OK
+RADAR -> 1,45 m | available draft 1,05 m | effective max draft 1,05 m
+Plan re-evaluated: draft 1,14 m (max 1,05 m) -> NOT APPROVED by draft
+  Tons to unload to stay within the limit: 375,00 t
+
+[CONTROLLED ERROR] Tugboat RIO-1800 cannot push 2475,00 t (max 2000 t)
+
+--- VOYAGE 2475,00 t | departure 2026-05-12 ---
+TUGBOAT    REGIME          NAVIGATION     DAYS  ARRIVAL
+RIO-3200   AGUAS_NORMALES  44 h 37 min    2     2026-05-14
+RIO-3200   AGUAS_BAJAS     59 h 29 min    5     2026-05-17
+RIO-3200   CRECIENTE       52 h 29 min    3     2026-05-15
