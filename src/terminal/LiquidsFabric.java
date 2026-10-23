@@ -3,7 +3,7 @@ package terminal;
 public class LiquidsFabric implements TerminalFabric {
     @Override
     public String name() {
-        return "LiquidsFabric";
+        return "LIQUIDOS";
     }
 
     @Override
