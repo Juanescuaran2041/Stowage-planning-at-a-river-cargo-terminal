@@ -17,8 +17,8 @@ public class RadarAdapter implements RiverLevelMeter {
             throw new IllegalStateException("Unexpected radar reading format");
         }
 
-        String levelCm = valueOf(parts[0]);
-        String status = valueOf(parts[1]);
+        String levelCm = extractOf(parts[0]);
+        String status = extractOf(parts[1]);
 
         // Check the status before using the level
         if (status.equals("FALLA")) {
@@ -33,7 +33,7 @@ public class RadarAdapter implements RiverLevelMeter {
     }
 
     // "KEY=value" -> "value"
-    private String valueOf(String pair) {
+    private String extractOf(String pair) {
         String[] keyValue = pair.split("=");
         if (keyValue.length != 2) {
             throw new IllegalStateException("Unexpected radar reading format");
